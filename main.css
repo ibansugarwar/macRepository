@@ -3,9 +3,19 @@
   padding:0;
 }
 
+
+body{
+  background-color: violet;
+}
+
 .index-header{
+  z-index: 100;
   position: fixed;
-  background-color: red;
+  top:0;
+  height: 60px;
+  width: 100%;
+  padding:20px;
+  background-color: #02579B;
 }
 
 
@@ -13,8 +23,22 @@
 
 
 
-.header-button{
-  background:#1AAB8A;
+
+
+
+
+
+
+
+/* ボタンのレイアウト **********************************/
+
+.header-btn{
+  float: right;
+  display: inline-block;
+  text-decoration: none;
+  margin-right:10px;
+
+  background:#02579B;
   color:#ffffff;
   border:none;
   position:relative;
@@ -26,29 +50,98 @@
   outline:none;
 }
 
-.header-button:hover{
-  background:#fff;
-  color:#1AAB8A;
+
+.header-btn p{
+  line-height: 60px;
 }
-.header-button:before,.header-button:after{
+
+.header-btn:hover{
+  background:#ffffff;
+  color:#02579B;
+}
+.header-btn:before,.header-btn:after{
   content:'';
   position:absolute;
   top:0;     /* ボーダーの初期位置（縦）*/
   right:0;    /* ボーダーがどこまで動くか（横）*/
   height:2px;  /* ボーダーの太さ*/
   width:0;      /* ボーダーの初期位置（横）*/
-  background: #1AAB8A;
+  background: #02579B;
   transition:400ms ease all;
   
 }
-.header-button:after{
+.header-btn:after{
   right:inherit;
   top:inherit;
   left:0;
   bottom:0;
 }
 
-.header-button:hover:before,.header-button:hover:after{
+.header-btn:hover:before,.header-btn:hover:after{
   width:100%;
   transition:800ms ease all;  /*指定時間でボタンに変化を与える */
+}
+
+/***************************************************************/
+
+
+
+
+.startup-img{
+  z-index: 0;
+  margin-top: 100px;
+  position: relative;
+}
+
+.startup-img p{
+  text-decoration:underline;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  text-align: center;
+
+
+  font-weight: bold; /*太字に*/
+  font-size: 50px;/*サイズ2倍*/
+
+
+}
+
+.startup-img img{
+  width: 100%;
+}
+
+
+
+.main-content{
+  margin-top:100px;
+}
+
+
+
+
+
+
+.about-me{
+
+  background-color: #ffffff;
+}
+
+
+
+.skill{
+  background-color: #02579B;
+}
+
+.skill p{
+  color: #ffffff;
 }
