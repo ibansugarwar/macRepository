@@ -1,0 +1,54 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+.index-header{
+  position: fixed;
+  background-color: red;
+}
+
+
+
+
+
+
+.header-button{
+  background:#1AAB8A;
+  color:#ffffff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+
+.header-button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+.header-button:before,.header-button:after{
+  content:'';
+  position:absolute;
+  top:0;     /* ボーダーの初期位置（縦）*/
+  right:0;    /* ボーダーがどこまで動くか（横）*/
+  height:2px;  /* ボーダーの太さ*/
+  width:0;      /* ボーダーの初期位置（横）*/
+  background: #1AAB8A;
+  transition:400ms ease all;
+  
+}
+.header-button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+
+.header-button:hover:before,.header-button:hover:after{
+  width:100%;
+  transition:800ms ease all;  /*指定時間でボタンに変化を与える */
+}
